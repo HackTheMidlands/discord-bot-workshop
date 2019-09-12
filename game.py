@@ -10,9 +10,6 @@ HIGHEST_NUMBER = 100
 bot = commands.Bot(command_prefix=PREFIX)
 numbers = {}
 
-def main():
-    bot.run(TOKEN)
-
 @bot.event
 async def on_ready():
     print('Bot ready!')
@@ -56,4 +53,4 @@ async def guess(ctx):
         await ctx.send(f'Correctly guessed, the number is {actual_number}!')
         del numbers[user_id]
 
-main()
+bot.run(TOKEN)
