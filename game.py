@@ -58,4 +58,5 @@ async def guess(ctx):
         await ctx.send('Too low!')
     else:
         await ctx.send(f'Correctly guessed, the number is {actual_number}!')
-        numbers.pop(user_id)
+        del numbers[user_id]
+
