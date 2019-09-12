@@ -1,5 +1,4 @@
 import random
-import logging
 import discord
 from discord.ext import commands
 
@@ -9,11 +8,10 @@ HIGHEST_NUMBER = 100
 LOWEST_NUMEBR = 1
 
 bot = commands.Bot(command_prefix=PREFIX)
-games = {}
+numbers = {}
 
 
 def main():
-    logging.basicConfig(level=logging.INFO)
     bot.run(TOKEN)
 
 
@@ -31,31 +29,29 @@ async def on_message(message):
 async def start(ctx):
     user_id = str(ctx.message.author.id)
 
-    if user_id in games:
+    if user_id in numbers:
         await ctx.send('Already in a game!')
         return
 
     random_number = random.randint(LOWEST_NUMEBR, HIGHEST_NUMBER + 1)
 
-    games[user_id] = {
-        'number': random_number
-    }
+    numbers[user_id] = random_number
 
     await ctx.send(f'I\'m thinking of a number between {LOWEST_NUMEBR} and {HIGHEST_NUMBER}\nType `!guess (number)` to make guesses!')
-    print(games)
+    print(numbers)
 
 
 @bot.command()
 async def guess(ctx):
     user_id = str(ctx.message.author.id)
 
-    if user_id not in games:
+    if user_id not in numbers:
         await ctx.send('You are not in a game yet! Use `!start` to begin one.')
         return
 
     guessed_number = int(ctx.message.content.split(' ')[1])
 
-    actual_number = games[user_id]['number']
+    actual_number = numbers[user_id]
 
     if guessed_number > actual_number:
         await ctx.send('Too high!')
@@ -63,4 +59,4 @@ async def guess(ctx):
         await ctx.send('Too low!')
     else:
         await ctx.send(f'Correctly guessed, the number is {actual_number}!')
-        del games[user_id]
+        del numbers[user_id]
