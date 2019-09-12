@@ -44,11 +44,7 @@ async def guess(ctx):
         await ctx.send('You are not in a game yet! Use `!start` to begin one.')
         return
 
-    try:
-        guessed_number = int(ctx.message.content.split(' ')[1])
-    except ValueError:
-        await ctx.send("That's not a number...")
-        return
+    guessed_number = int(ctx.message.content.split(' ')[1])
 
     actual_number = numbers[user_id]
 
