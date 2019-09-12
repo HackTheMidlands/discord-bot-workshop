@@ -4,8 +4,8 @@ from discord.ext import commands
 
 TOKEN = 'NjIxNzIyNzUxODk5NTMzMzEy.XXpeeQ.-X8uzCZV9AZEiy1BendmENDndlA'
 PREFIX = '!'
-HIGHEST_NUMBER = 100
 LOWEST_NUMEBR = 1
+HIGHEST_NUMBER = 100
 
 bot = commands.Bot(command_prefix=PREFIX)
 numbers = {}
@@ -33,7 +33,7 @@ async def start(ctx):
 
     numbers[user_id] = random_number
 
-    await ctx.send(f'I\'m thinking of a number between {LOWEST_NUMEBR} and {HIGHEST_NUMBER}\nType `!guess (number)` to make guesses!')
+    await ctx.send(f"I'm thinking of a number between {LOWEST_NUMEBR} and {HIGHEST_NUMBER}\nType `!guess (number)` to make guesses!")
     print(numbers)
 
 @bot.command()
@@ -54,4 +54,4 @@ async def guess(ctx):
         await ctx.send('Too low!')
     else:
         await ctx.send(f'Correctly guessed, the number is {actual_number}!')
-        del numbers[user_id]
+        numbers.pop(user_id)
