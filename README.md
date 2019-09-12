@@ -9,11 +9,11 @@ When you’re logged in to Discord, [click here to start creating your bot.](htt
 
 | Step | Screenshot |
 |---|---|
-| 1. Click "New Application" | <img src="/images/step1.png?raw=true" height="300"> |
-| 2. Enter a name for your bot | <img src="/images/step2.png?raw=true" height="300"> |
-| 3. Click the "Bot" tab on the left-hand side. Then click the "Add Bot" button. | <img src="/images/step3.png?raw=true" height="300"> |
-| 4. Click the "Yes, do it!" | <img src="/images/step4.png?raw=true" height="300"> |
-| 5. Click "Copy" to copy the bot's token to your clipboard. | <img src="/images/step5.png?raw=true" height="300"> |
+| 1. Click "New Application" | <img src="/images/step1.png?raw=true"> |
+| 2. Enter a name for your bot | <img src="/images/step2.png?raw=true"> |
+| 3. Click the "Bot" tab on the left-hand side. Then click the "Add Bot" button. | <img src="/images/step3.png?raw=true"> |
+| 4. Click the "Yes, do it!" | <img src="/images/step4.png?raw=true"> |
+| 5. Click "Copy" to copy the bot's token to your clipboard. | <img src="/images/step5.png?raw=true"> |
 
 ## Step 3 - Fork `repl.it`
 
