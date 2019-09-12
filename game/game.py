@@ -10,20 +10,16 @@ LOWEST_NUMEBR = 1
 bot = commands.Bot(command_prefix=PREFIX)
 numbers = {}
 
-
 def main():
     bot.run(TOKEN)
-
 
 @bot.event
 async def on_ready():
     print('Bot ready!')
 
-
 @bot.event
 async def on_message(message):
     await bot.process_commands(message)
-
 
 @bot.command()
 async def start(ctx):
@@ -39,7 +35,6 @@ async def start(ctx):
 
     await ctx.send(f'I\'m thinking of a number between {LOWEST_NUMEBR} and {HIGHEST_NUMBER}\nType `!guess (number)` to make guesses!')
     print(numbers)
-
 
 @bot.command()
 async def guess(ctx):
