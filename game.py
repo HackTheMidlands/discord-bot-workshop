@@ -60,3 +60,4 @@ async def guess(ctx):
         await ctx.send(f'Correctly guessed, the number is {actual_number}!')
         del numbers[user_id]
 
+main()
