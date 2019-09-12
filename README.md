@@ -22,7 +22,17 @@ When you’re logged in to Discord, [click here to start creating your bot.](htt
 
 <img src="/images/repl.png?raw=true" height="300">
 
-3. Press the run button (the green triangle at the top)!
+3. Press the run button (the green triangle at the top). The website first has to install some extra code - so it will produce lots of spam like this for short while before your bot starts:
+
+<img src="/images/repl_install.png?raw=true" height="300">
+
+4. When it is done, the screen will clear and your bot will start up:
+
+<img src="/images/repl_done.png?raw=true" height="300">
+
+If all goes well, the message `Bot ready!` will appear.
+
+TODO: how to DM bot
 
 ## Step 4 - Extensions
 1. Add error handling (!guess (with no arg) / !guess (with non-int arg))

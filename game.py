@@ -53,4 +53,5 @@ async def guess(ctx):
         await ctx.send(f"Correctly guessed, the number is {actual_number}!")
         del numbers[user_id]
 
+print('\x1b[2J\nBot starting...')
 bot.run(TOKEN)
