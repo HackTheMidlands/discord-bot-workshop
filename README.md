@@ -41,8 +41,8 @@ If you get stuck, ask a volunteer for help!
 
 If all goes well, the message `Bot ready!` will appear.
 
-TODO: how to DM bot
-
 ## Step 4 - Extensions
 
 1. Add error handling (!guess (with no arg) / !guess (with non-int arg))
+2. Send a picture!
+3. Make the coolest bot!
